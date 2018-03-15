@@ -1,0 +1,19 @@
+.root{
+    -fx-background-color: #413942;
+
+}
+#controlsBar{
+    -fx-background-color: #1F1720;
+}
+#bodyVBox{
+    -fx-background-color: #252026;
+}
+#sortingPane{
+    -fx-background-color: #322E33;
+}
+
+.color-primary-0 { color: #282428 }	/* Main Primary color */
+.color-primary-1 { color: #413942 }
+.color-primary-2 { color: #322E33 }
+.color-primary-3 { color: #252026 }
+.color-primary-4 { color: #1F1720 }

@@ -1,0 +1,19 @@
+
+<svg version="2.2" width="200px" height="200px" viewBox="0 0 200 200" preserveAspectRatio="none">
+  <g style="transform:scale(2.0)">
+    <rect x="19" y="10" width="25" height="80"
+    fill="black" fill-opacity="0.5" />
+
+    <rect x="18" y="9" width="27" height="82"
+    rx="1" ry="1"
+    fill="black" stroke="black" stroke-opacity="0.7" stroke-width="2" fill-opacity="0" />
+
+
+    <rect x="55" y="10" width="25" height="80"
+    fill="black" fill-opacity="0.5" />
+
+    <rect x="54" y="9" width="27" height="82"
+    rx="1" ry="1"
+    fill="black" stroke="black" stroke-opacity="0.7" stroke-width="2" fill-opacity="0" />
+  </g>
+</svg>
