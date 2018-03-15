@@ -4,6 +4,9 @@ import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
@@ -41,17 +44,27 @@ public class Main extends Application {
 
         mainPane.setCenter(bodyV);
 
-        VBox sortingPane = new VBox();
+        VBox queuePane = new VBox();
 
-        sortingPane.setPadding(new Insets(0, 200, 0, 0));
-        sortingPane.setId("sortingPane");
-        mainPane.setLeft(sortingPane);
+        queuePane.setPadding(new Insets(0, 250, 0, 0));
+        queuePane.setId("queuePane");
+        mainPane.setLeft(queuePane);
 
-        controls.setPadding(new Insets(15, 12, 40, 12));
+        controls.setPadding(new Insets(0,0,0,0));
         controls.setId("controlsBar");
-        //controls.setSpacing(10);
-        //controls.setAlignment(Pos.CENTER);
+        controls.setSpacing(10);
+        controls.setAlignment(Pos.CENTER);
+        controls.setMaxHeight(40);
+        //controls.setFillHeight(true);
 
+        Image imagePlay = new Image(getClass().getResourceAsStream("pause.png"), 50, 50, true, true);
+        Button playButton = new Button("", new ImageView(imagePlay));
+        playButton.setId("playButton");
+
+        playButton.setMaxHeight(35);
+        playButton.setMaxWidth(35);
+
+        controls.getChildren().add(playButton);
 
         mainPane.setBottom(controls);
 

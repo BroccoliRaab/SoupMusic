@@ -8,8 +8,13 @@
 #bodyVBox{
     -fx-background-color: #252026;
 }
-#sortingPane{
+#queuePane{
     -fx-background-color: #322E33;
+}
+
+#playButton{
+    -fx-background-color: transparent;
+    -fx-opacity: .3;
 }
 
 .color-primary-0 { color: #282428 }	/* Main Primary color */
