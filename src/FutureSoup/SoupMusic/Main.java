@@ -11,7 +11,7 @@ import javafx.stage.Stage;
 
 
 public class Main extends Application {
-    public static final String TITLE = "MusicSoup";
+    public static final String TITLE = "SoupMusic";
     public static final int DEFAULT_WIDTH = 900;
     public static final int DEFAULT_HEIGHT = 500;
 
