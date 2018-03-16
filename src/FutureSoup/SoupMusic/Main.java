@@ -57,14 +57,15 @@ public class Main extends Application {
         controls.setMaxHeight(40);
         //controls.setFillHeight(true);
 
-        Image imagePlay = new Image(getClass().getResourceAsStream("pause.png"), 50, 50, true, true);
-        Button playButton = new Button("", new ImageView(imagePlay));
-        playButton.setId("playButton");
+        PlayPauseButton playPauseButton = new PlayPauseButton(0);
+        playPauseButton.setId("playButton");
 
-        playButton.setMaxHeight(35);
-        playButton.setMaxWidth(35);
 
-        controls.getChildren().add(playButton);
+
+        playPauseButton.setMaxHeight(35);
+        playPauseButton.setMaxWidth(35);
+
+        controls.getChildren().add(playPauseButton);
 
         mainPane.setBottom(controls);
 
