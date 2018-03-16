@@ -10,8 +10,8 @@ public class PlayPauseButton extends StateButton {
     ImageView imageViewPlay = new ImageView(imagePlay);
     ImageView imageViewPause = new ImageView(imagePause);
 
-    public static int PLAYBUTTONVISBLE = 0;
-    public static int PAUSEUTTONVISBLE = 1;
+    public static int PLAY_BUTTON_VISIBLE = 0;
+    public static int PAUSE_BUTTON_VISIBLE = 1;
 
     @Override
     public void state0Action() {
@@ -24,9 +24,9 @@ public class PlayPauseButton extends StateButton {
     }
     public PlayPauseButton(int defaultState){
         super(defaultState);
-        if (defaultState == PLAYBUTTONVISBLE){
+        if (defaultState == PLAY_BUTTON_VISIBLE){
             this.setGraphic(imageViewPlay);
-        }else if (defaultState == PAUSEUTTONVISBLE){
+        }else if (defaultState == PAUSE_BUTTON_VISIBLE){
             this.setGraphic(imageViewPause);
         }
 
