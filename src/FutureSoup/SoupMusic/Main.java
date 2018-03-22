@@ -13,6 +13,8 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
+import java.io.File;
+
 
 public class Main extends Application {
     public static final String TITLE = "SoupMusic";
@@ -32,7 +34,7 @@ public class Main extends Application {
 
         primaryStage.setScene(mainScene);
 
-        mainScene.getStylesheets().add("Style.css");
+        mainScene.getStylesheets().add("FutureSoup/SoupMusic/resources/style.css");
 
         primaryStage.setTitle(TITLE);
 
@@ -41,7 +43,6 @@ public class Main extends Application {
         VBox bodyV = new VBox();
 
         bodyV.setId("bodyVBox");
-
 
         mainPane.setCenter(bodyV);
 
@@ -61,12 +62,17 @@ public class Main extends Application {
         PlayPauseButton playPauseButton = new PlayPauseButton(0);
         playPauseButton.setId("playButton");
 
+        SkipButton forwardSkip = new SkipButton(SkipButton.FORWARD);
+        forwardSkip.setId("forwardSkip");
+
+        SkipButton backwardSkip = new SkipButton(SkipButton.BACKWARD);
+        backwardSkip.setId("backwardSkip");
 
 
-        playPauseButton.setMaxHeight(35);
-        playPauseButton.setMaxWidth(35);
 
-        controls.getChildren().add(playPauseButton);
+
+
+        controls.getChildren().addAll(backwardSkip, playPauseButton, forwardSkip);
 
         mainPane.setBottom(controls);
 
