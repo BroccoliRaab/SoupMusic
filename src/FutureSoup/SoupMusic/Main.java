@@ -5,26 +5,18 @@ import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.effect.DropShadow;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
-import javafx.scene.paint.Color;
-import javafx.scene.text.Font;
-import javafx.scene.text.Text;
 import javafx.stage.Stage;
-
-import java.io.File;
 
 
 public class Main extends Application {
     public static final String TITLE = "SoupMusic";
     public static final int DEFAULT_WIDTH = 900;
     public static final int DEFAULT_HEIGHT = 500;
+    public static HBox infoPane;
+    private Track currentTrack;
 
     @Override
     public void start(Stage primaryStage) throws Exception{
@@ -54,14 +46,24 @@ public class Main extends Application {
         VBox leftPane = new VBox();
         VBox queuePane = new VBox();
 
+        //Uncomment this and put path to mp3 file to get to work
+        //Player.setCurrentTrack(new Track(new File("F:\\Music\\OSTs\\Shinsekai Yori Original Soundtrack CD1\\01. Traditional Song Of Shadows Part One.mp3")));
 
+        currentTrack= Player.getCurrentTrack();
+        if (currentTrack != null) {
+            infoPane = currentTrack.getInfoPane();
+        }else {
+            infoPane = new HBox();
+        }
 
         leftPane.setPadding(new Insets(0, 0, 0, 0));
         leftPane.setId("leftPane");
 
         leftPane.setPrefWidth(240);
 
-        HBox infoPane = new HBox();
+
+
+        /*HBox infoPane = new HBox();
         infoPane.setPadding(new Insets(5, 0, 5, 5));
         infoPane.setId("infoPane");
 
@@ -105,9 +107,11 @@ public class Main extends Application {
 
         textInfoPane.getChildren().addAll( songLabel, artistLabel, albumLabel, yearLabel, genreLabel);
 
+        */
         queuePane.setPadding(new Insets(0, 0, 0, 0));
         queuePane.setId("queuePane");
         leftPane.getChildren().addAll(infoPane, queuePane);
+
 
         HBox queueControls = new HBox();
         queueControls.setId("queueControls");

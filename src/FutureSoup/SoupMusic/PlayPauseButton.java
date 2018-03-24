@@ -15,12 +15,21 @@ public class PlayPauseButton extends StateButton {
 
     @Override
     public void state0Action() {
-        this.setGraphic(imageViewPause);
+
+        Track cTrack = Player.getCurrentTrack();
+        if (cTrack != null) {
+            cTrack.getMediaPlayer().play();
+            this.setGraphic(imageViewPause);
+        }
     }
 
     @Override
     public void state1Action() {
-        this.setGraphic(imageViewPlay);
+        Track cTrack = Player.getCurrentTrack();
+        if (cTrack != null) {
+            cTrack.getMediaPlayer().pause();
+            this.setGraphic(imageViewPlay);
+        }
     }
     public PlayPauseButton(int defaultState){
         super(defaultState);
