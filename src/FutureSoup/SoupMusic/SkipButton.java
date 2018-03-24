@@ -8,10 +8,10 @@ public class SkipButton extends Button{
     public static final int FORWARD = 1;
     public static final int BACKWARD = -1;
 
-    Image imageSkipForward = new Image(getClass().getResourceAsStream("resources/images/FF.png"), 50, 50, true, true);
-    Image imageSkipBackward = new Image(getClass().getResourceAsStream("resources/images/RR.png"), 50, 50, true, true);
-    ImageView imageViewSkipForward= new ImageView(imageSkipForward);
-    ImageView imageViewSkipBackward = new ImageView(imageSkipBackward);
+    private Image imageSkipForward = new Image(getClass().getResourceAsStream("resources/images/FF.png"), 50, 50, true, true);
+    private Image imageSkipBackward = new Image(getClass().getResourceAsStream("resources/images/RR.png"), 50, 50, true, true);
+    private ImageView imageViewSkipForward= new ImageView(imageSkipForward);
+    private ImageView imageViewSkipBackward = new ImageView(imageSkipBackward);
 
     public SkipButton(int direction){
         if ( direction == FORWARD ){

@@ -5,10 +5,10 @@ import javafx.scene.image.ImageView;
 
 public class PlayPauseButton extends StateButton {
 
-    Image imagePlay = new Image(getClass().getResourceAsStream("resources/images/play.png"), 50, 50, true, true);
-    Image imagePause = new Image(getClass().getResourceAsStream("resources/images/pause.png"), 50, 50, true, true);
-    ImageView imageViewPlay = new ImageView(imagePlay);
-    ImageView imageViewPause = new ImageView(imagePause);
+    private Image imagePlay = new Image(getClass().getResourceAsStream("resources/images/play.png"), 50, 50, true, true);
+    private Image imagePause = new Image(getClass().getResourceAsStream("resources/images/pause.png"), 50, 50, true, true);
+    private ImageView imageViewPlay = new ImageView(imagePlay);
+    private ImageView imageViewPause = new ImageView(imagePause);
 
     public static int PLAY_BUTTON_VISIBLE = 0;
     public static int PAUSE_BUTTON_VISIBLE = 1;

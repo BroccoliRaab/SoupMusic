@@ -27,7 +27,7 @@ public class Main extends Application {
         //primaryStage.setScene(new Scene(root, DEFAULTWIDTH, DEFAULTHEIGHT));
 
         //BorderPane is a layout with a center, top, bottom, left, and right
-        //Left will have selection of by what to sort: Contr. Artist, Album Artist, Album, Genres, Years, Composers, ECT
+         //Left will have selection of by what to sort: Contr. Artist, Album Artist, Album, Genres, Years, Composers, ECT
         BorderPane mainPane = new BorderPane();
 
         Scene mainScene = new Scene(mainPane, DEFAULT_WIDTH, DEFAULT_HEIGHT);

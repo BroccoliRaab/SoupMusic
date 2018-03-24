@@ -1,9 +1,0 @@
-<svg version="2.2" width="260px" height="200px" viewBox="0 0 260 200" preserveAspectRatio="none">
-  <g>
-    <polygon points="10,20 55,20 130,100 55,180 10,180 85,100"
-      fill="#b3b3b3" stroke="#b3b3b3" stroke-opacity="0.7" stroke-width="4" fill-opacity=".5"  />
-
-    <polygon points="100,20 145,20 210,95 210,20 250,20 250,180 210,180 210,105 145,180 100,180 170,100"
-      fill="#b3b3b3" stroke="#b3b3b3" stroke-opacity="0.7" stroke-width="4" fill-opacity=".5" />
-  </g>
-</svg>
