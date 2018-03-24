@@ -29,6 +29,13 @@
     -fx-font-size: 14;
     -fx-fill: #919191;
 }
+#infoPane{
+    -fx-background-color: #2e2535;
+}
+#queueControls{
+   -fx-background-color: #2e2535;
+}
+
 
 .color-primary-0 { color: #282428 }	/* Main Primary color */
 .color-primary-1 { color: #413942 }

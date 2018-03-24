@@ -7,11 +7,13 @@ import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.effect.DropShadow;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
@@ -52,13 +54,15 @@ public class Main extends Application {
         VBox leftPane = new VBox();
         VBox queuePane = new VBox();
 
-        leftPane.setPadding(new Insets(10, 5, 0, 5));
+
+
+        leftPane.setPadding(new Insets(0, 0, 0, 0));
         leftPane.setId("leftPane");
 
         leftPane.setPrefWidth(240);
 
         HBox infoPane = new HBox();
-        infoPane.setPadding(new Insets(0, 0, 0, 0));
+        infoPane.setPadding(new Insets(5, 0, 5, 5));
         infoPane.setId("infoPane");
 
         VBox textInfoPane = new VBox();
@@ -71,6 +75,11 @@ public class Main extends Application {
         ImageView imageViewAlbumArt = new ImageView(imageAlbumArt);
         infoPane.getChildren().addAll(imageViewAlbumArt, textInfoPane);
 
+        DropShadow albumArtShadow = new DropShadow();
+        albumArtShadow.setColor(Color.BLACK);
+
+        imageViewAlbumArt.setEffect(albumArtShadow);
+
         //Label artistLabel = new Label("Artist Name");
 
         Text artistLabel = new Text();
@@ -79,7 +88,7 @@ public class Main extends Application {
         //Label songLabel = new Label("Song Name");
 
         Text songLabel = new Text();
-        songLabel.setText("Song Name");
+        songLabel.setText("Song Title");
         songLabel.setId("infoText");
 
         Text albumLabel = new Text();
@@ -99,6 +108,11 @@ public class Main extends Application {
         queuePane.setPadding(new Insets(0, 0, 0, 0));
         queuePane.setId("queuePane");
         leftPane.getChildren().addAll(infoPane, queuePane);
+
+        HBox queueControls = new HBox();
+        queueControls.setId("queueControls");
+
+
 
         mainPane.setLeft(leftPane);
 
