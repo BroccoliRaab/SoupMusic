@@ -6,11 +6,14 @@ import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Font;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.File;
@@ -46,11 +49,58 @@ public class Main extends Application {
 
         mainPane.setCenter(bodyV);
 
+        VBox leftPane = new VBox();
         VBox queuePane = new VBox();
 
-        queuePane.setPadding(new Insets(0, 250, 0, 0));
+        leftPane.setPadding(new Insets(10, 5, 0, 5));
+        leftPane.setId("leftPane");
+
+        leftPane.setPrefWidth(240);
+
+        HBox infoPane = new HBox();
+        infoPane.setPadding(new Insets(0, 0, 0, 0));
+        infoPane.setId("infoPane");
+
+        VBox textInfoPane = new VBox();
+        textInfoPane.setPadding(new Insets(0, 0, 0, 5));
+        textInfoPane.setId("textInfoPane");
+
+        //||||| This is just Temp to get idea of visuals
+        //VVVVV
+        Image imageAlbumArt = new Image(getClass().getResourceAsStream("resources/images/albumArtDef.png"), 100, 100, true, true);
+        ImageView imageViewAlbumArt = new ImageView(imageAlbumArt);
+        infoPane.getChildren().addAll(imageViewAlbumArt, textInfoPane);
+
+        //Label artistLabel = new Label("Artist Name");
+
+        Text artistLabel = new Text();
+        artistLabel.setText("Artist Name");
+        artistLabel.setId("infoText");
+        //Label songLabel = new Label("Song Name");
+
+        Text songLabel = new Text();
+        songLabel.setText("Song Name");
+        songLabel.setId("infoText");
+
+        Text albumLabel = new Text();
+        albumLabel.setText("Album Name");
+        albumLabel.setId("infoText");
+
+        Text yearLabel = new Text();
+        yearLabel.setText("Year");
+        yearLabel.setId("infoText");
+
+        Text genreLabel = new Text();
+        genreLabel.setText("Genre");
+        genreLabel.setId("infoText");
+
+        textInfoPane.getChildren().addAll( songLabel, artistLabel, albumLabel, yearLabel, genreLabel);
+
+        queuePane.setPadding(new Insets(0, 0, 0, 0));
         queuePane.setId("queuePane");
-        mainPane.setLeft(queuePane);
+        leftPane.getChildren().addAll(infoPane, queuePane);
+
+        mainPane.setLeft(leftPane);
 
         controls.setPadding(new Insets(0,0,0,0));
         controls.setId("controlsBar");

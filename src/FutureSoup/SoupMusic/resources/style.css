@@ -25,6 +25,10 @@
     -fx-background-color: transparent;
     -fx-opacity: .3;
 }
+#infoText{
+    -fx-font-size: 14;
+    -fx-fill: #919191;
+}
 
 .color-primary-0 { color: #282428 }	/* Main Primary color */
 .color-primary-1 { color: #413942 }
