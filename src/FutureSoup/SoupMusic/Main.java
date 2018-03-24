@@ -10,6 +10,8 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
+import java.io.File;
+
 
 public class Main extends Application {
     public static final String TITLE = "SoupMusic";
@@ -47,7 +49,7 @@ public class Main extends Application {
         VBox queuePane = new VBox();
 
         //Uncomment this and put path to mp3 file to get to work
-        //Player.setCurrentTrack(new Track(new File("F:\\Music\\OSTs\\Shinsekai Yori Original Soundtrack CD1\\01. Traditional Song Of Shadows Part One.mp3")));
+        //Player.setCurrentTrack(new Track(new File("F:\\Music\\Bad Religion\\Against The Grain (Reissue)\\09 - Entropy (Album Version).mp3")));
 
         currentTrack= Player.getCurrentTrack();
         if (currentTrack != null) {
